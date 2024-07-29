@@ -59,7 +59,8 @@
       "enable_uart=1",
       "dtoverlay=dwc2",
       "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
-      "dtoverlay=mrhat-bq25622:ce_override=true"
+      "dtoverlay=mrhat-bq25622:ce_override=true",
+      "dtoverlay=imx519"
     ]
   }
 ]
