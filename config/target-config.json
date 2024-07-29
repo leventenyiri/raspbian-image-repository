@@ -32,13 +32,24 @@
         }
       },
       {
-        "package": "filebeat",
-        "version": "8.12.2",
-        "file_url": "https://github.com/EffectiveRange/elastic-beats-armhf-deb/releases/download/v8.12.2/filebeat-8.12.2-armv7l.deb"
+        "package": "mrhat-rx8130",
+        "file_url": "https://github.com/EffectiveRange/drv-rx8130ce/releases/download/v0.2.2/mrhat-rx8130_0.2.2-1_armhf.deb"
       },
       {
-        "package": "mrhat-rx8130",
-        "file_url": "https://github.com/EffectiveRange/drv-rx8130ce/releases/download/v0.1.0/mrhat-rx8130_0.1.0-1_all.deb"
+        "package": "aitia",
+        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.2.0/python3-aitia_0.2.0_all.deb"
+      },
+      {
+        "package": "battery",
+        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/mrhat-bq25622_0.1.0-1_armhf.deb"
+      },
+      {
+        "package": "pip",
+        "file_url": "http://ftp.hu.debian.org/debian/pool/main/p/python-pip/python3-pip_20.3.4-4+deb11u1_all.deb"
+      },
+      {
+        "package": "upower",
+        "file_url": "http://ftp.hu.debian.org/debian/pool/main/u/upower/upower_0.99.20-2_armhf.deb"
       }
     ],
     "boot_cmdline": [
@@ -46,79 +57,9 @@
     ],
     "boot_config": [
       "enable_uart=1",
-      "dtoverlay=dwc2"
-    ]
-  },
-  {
-    "name": "core-pi-4",
-    "version": "0.2.0",
-    "reference": "2024-03-12-raspios-bullseye-arm64",
-    "sources": [
-      {
-        "name": "docker",
-        "source": "deb https://download.docker.com/linux/debian bullseye stable",
-        "key_id": "9DC858229FC7DD38854AE2D88D81803C0EBFCD88",
-        "key_file": "https://download.docker.com/linux/debian/gpg"
-      },
-      {
-        "name": "effective-range",
-        "source": "deb http://aptrepo.effective-range.com stable main",
-        "key_id": "C1AEE2EDBAEC37595801DDFAE15BC62117A4E0F3",
-        "key_file": "http://aptrepo.effective-range.com/dists/stable/public.key",
-        "key_server": "keyserver.ubuntu.com"
-      }
-    ],
-    "packages": [
-      {
-        "package": "docker-ce"
-      },
-      {
-        "package": "docker-ce-cli"
-      },
-      {
-        "package": "containerd.io"
-      },
-      {
-        "package": "docker-buildx-plugin"
-      },
-      {
-        "package": "docker-compose-plugin"
-      },
-      {
-        "package": "docker-ce"
-      },
-      {
-        "package": "log-server",
-        "release": {
-          "owner": "EffectiveRange",
-          "repo": "log-server",
-          "tag": "latest",
-          "matcher": "*arm64.deb"
-        }
-      },
-      {
-        "package": "apt-server",
-        "release": {
-          "owner": "EffectiveRange",
-          "repo": "apt-server",
-          "tag": "latest",
-          "matcher": "*arm64.deb"
-        }
-      },
-      {
-        "package": "ansible-server",
-        "release": {
-          "owner": "EffectiveRange",
-          "repo": "ansible-server",
-          "tag": "latest",
-          "matcher": "*arm64.deb"
-        }
-      },
-      {
-        "package": "filebeat",
-        "version": "8.12.2",
-        "file_url": "https://github.com/EffectiveRange/elastic-beats-armhf-deb/releases/download/v8.12.2/filebeat-8.12.2-arm64.deb"
-      }
+      "dtoverlay=dwc2",
+      "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
+      "dtoverlay=mrhat-bq25622:ce_override=true"
     ]
   }
 ]
