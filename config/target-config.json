@@ -38,7 +38,7 @@
       },
       {
         "package": "aitia",
-        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.3.0/python3-aitia_0.3.0_all.deb"
+        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.3.1/python3-aitia_0.3.1_all.deb"
       }
     ],
     "boot_config": [
