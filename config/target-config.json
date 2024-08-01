@@ -40,12 +40,12 @@
         "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.2.0/python3-aitia_0.2.0_all.deb"
       },
       {
-        "package": "battery",
-        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.2.0/mrhat-bq25622_0.2.0-1_armhf.deb"
+        "package": "battery_definition",
+        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/mrhat-battery-simple.deb"
       },
       {
-        "package": "battery_definition",
-        "file_url": "https://github.com/EffectiveRange/drv-battery/releases/download/v0.1.0/mrhat-battery-simple_0.1.0-1_all.deb"
+        "package": "battery",
+        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.4.0/mrhat-bq25622_0.3.0-1_armhf.deb"
       },
       {
         "package": "pip",
@@ -56,14 +56,12 @@
         "file_url": "http://ftp.hu.debian.org/debian/pool/main/u/upower/upower_0.99.20-2_armhf.deb"
       }
     ],
-    "boot_cmdline": [
-      "modules-load=dwc2,g_ether"
-    ],
     "boot_config": [
       "enable_uart=1",
-      "dtoverlay=dwc2",
+      "dtoverlay=imx519",
       "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
-      "dtoverlay=mrhat-bq25622:ce_override=fla",
+      "dtoverlay=mrhat-battery-simple",
+      "dtoverlay=mrhat-bq25622:ce_override=true",
       "dtoverlay=imx519"
     ]
   }
