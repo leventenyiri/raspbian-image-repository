@@ -48,6 +48,13 @@
       "dtoverlay=mrhat-battery-simple",
       "dtoverlay=mrhat-bq25622:ce_override=true",
       "dtoverlay=imx519"
+    ],
+    "post_install": [
+      "wget -O /tmp/install_pivariety_pkgs.sh https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh",
+      "chmod +x /tmp/install_pivariety_pkgs.sh",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_dev",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_apps",
+      "/tmp/install_pivariety_pkgs.sh -p imx519_kernel_driver_low_speed"
     ]
   }
 ]
