@@ -31,14 +31,14 @@
       },
       {
         "package": "mrhat-bq25622",
-        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.5.0/mrhat-bq25622_0.5.0-1_armhf.deb"
+        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.5.1/mrhat-bq25622_0.5.1-1_armhf.deb"
       },
       {
         "package": "upower"
       },
       {
         "package": "aitia",
-        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.3.2/python3-aitia_0.3.2_all.deb"
+        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.3.3/python3-aitia_0.3.3_all.deb"
       }
     ],
     "boot_config": [
