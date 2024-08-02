@@ -27,7 +27,7 @@
       },
       {
         "package": "mrhat-battery-simple",
-        "file_url": "https://github.com/EffectiveRange/drv-battery/releases/download/v0.1.0/mrhat-battery-simple_0.1.0-1_all.deb"
+        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/mrhat-battery-simple.deb"
       },
       {
         "package": "mrhat-bq25622",
