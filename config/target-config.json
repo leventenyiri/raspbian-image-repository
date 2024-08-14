@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -14,16 +14,33 @@
     ],
     "packages": [
       {
+        "package": "upower"
+      },
+      {
+        "package": "libcamera-dev"
+      },
+      {
+        "package": "libcamera-apps"
+      },
+      {
+        "package": "aitia",
+        "file_url": "https://github.com/Aitia-IIOT/sentinel-mrhat-cam/releases/download/v1.0.0/python3-sentinel-mrhat-cam_1.0.0_all.deb"
+      },
+      {
         "package": "wifi-manager",
-        "file_url": "https://github.com/EffectiveRange/wifi-manager/releases/download/v1.0.5/wifi-manager_1.0.5_armhf.deb"
+        "file_url": "https://github.com/EffectiveRange/wifi-manager/releases/download/v1.0.6/wifi-manager_1.0.6_armhf.deb"
       },
       {
         "package": "picprogrammer",
         "file_url": "https://github.com/EffectiveRange/pic18-q20-programmer/releases/download/v0.3.0/picprogrammer_0.3.0-1_armhf.deb"
       },
       {
+        "package": "mrhat-rtcwake",
+        "file_url": "https://github.com/EffectiveRange/mrhat-rtcwake/releases/download/v0.1.4/python3-mrhat-rtcwake_0.1.4_all.deb"
+      },
+      {
         "package": "mrhat-rx8130",
-        "file_url": "https://github.com/EffectiveRange/drv-rx8130ce/releases/download/v0.2.2/mrhat-rx8130_0.2.2-1_armhf.deb"
+        "file_url": "https://github.com/EffectiveRange/drv-rx8130ce/releases/download/v0.2.2/mrhat-rx8130_0.3.0-1_armhf.deb"
       },
       {
         "package": "mrhat-battery-simple",
@@ -31,14 +48,7 @@
       },
       {
         "package": "mrhat-bq25622",
-        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.5.1/mrhat-bq25622_0.5.1-1_armhf.deb"
-      },
-      {
-        "package": "upower"
-      },
-      {
-        "package": "aitia",
-        "file_url": "https://github.com/leventenyiri/AitiA/releases/download/v0.3.3/python3-aitia_0.3.3_all.deb"
+        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.5.0/mrhat-bq25622_0.6.0-1_armhf.deb"
       }
     ],
     "boot_config": [
@@ -46,8 +56,7 @@
       "dtoverlay=imx519",
       "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
       "dtoverlay=mrhat-battery-simple",
-      "dtoverlay=mrhat-bq25622:ce_override=true",
-      "dtoverlay=imx519"
+      "dtoverlay=mrhat-bq25622:ce_override=true"
     ]
   }
 ]
