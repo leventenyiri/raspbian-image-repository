@@ -23,8 +23,8 @@
         "package": "libcamera-apps"
       },
       {
-        "package": "aitia",
-        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/python3-sentinel-mrhat-cam_1.0.0_all.deb"
+        "package": "sentinel_mrhat_cam",
+        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/python3-sentinel-mrhat-cam_1.0.1_all.deb"
       },
       {
         "package": "wifi-manager",
