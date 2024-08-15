@@ -57,10 +57,6 @@
       "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
       "dtoverlay=mrhat-battery-simple",
       "dtoverlay=mrhat-bq25622:ce_override=true"
-    ],
-    "post_install": [
-      "chmod +x /usr/local/lib/python3.9/dist-packages/sentinel_mrhat_cam/daemon.sh",
-      "/usr/local/lib/python3.9/dist-packages/sentinel_mrhat_cam/daemon.sh"
     ]
   }
 ]
