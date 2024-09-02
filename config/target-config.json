@@ -14,49 +14,23 @@
     ],
     "packages": [
       {
+        "package": "i2c-tools"
+      },
+      {
         "package": "upower"
       },
       {
-        "package": "libcamera-dev"
-      },
-      {
-        "package": "libcamera-apps"
-      },
-      {
-        "package": "sentinel_mrhat_cam",
-        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/python3-sentinel-mrhat-cam_1.0.8_all.deb"
-      },
-      {
-        "package": "wifi-manager",
-        "file_url": "https://github.com/EffectiveRange/wifi-manager/releases/download/v1.0.6/wifi-manager_1.0.6_armhf.deb"
-      },
-      {
-        "package": "picprogrammer",
-        "file_url": "https://github.com/EffectiveRange/pic18-q20-programmer/releases/download/v0.3.0/picprogrammer_0.3.0-1_armhf.deb"
-      },
-      {
-        "package": "mrhat-rtcwake",
-        "file_url": "https://github.com/EffectiveRange/mrhat-rtcwake/releases/download/v0.1.4/python3-mrhat-rtcwake_0.1.4_all.deb"
-      },
-      {
-        "package": "mrhat-rx8130",
-        "file_url": "https://github.com/EffectiveRange/drv-rx8130ce/releases/download/v0.2.2/mrhat-rx8130_0.3.0-1_armhf.deb"
-      },
-      {
-        "package": "mrhat-battery-simple",
-        "file_url": "https://raw.githubusercontent.com/bnyitrai03/rpizero_storage/main/mrhat-battery-simple.deb"
-      },
-      {
-        "package": "mrhat-bq25622",
-        "file_url": "https://github.com/EffectiveRange/drv-bq25622/releases/download/v0.5.0/mrhat-bq25622_0.6.0-1_armhf.deb"
+        "package": "mrhat-pkg",
+        "version": "1.1.1",
+        "file_url": "https://github.com/EffectiveRange/mrhat-pkg/releases/download/v1.1.1/mrhat-pkg_1.1.1-1_all.deb"
       }
     ],
     "boot_config": [
       "enable_uart=1",
       "dtoverlay=imx519",
-      "dtoverlay=mrhat-rx8130:rtc_irq_pin=5",
       "dtoverlay=mrhat-battery-simple",
-      "dtoverlay=mrhat-bq25622:ce_override=true"
+      "dtoverlay=mrhat-bq25622",
+      "dtoverlay=mrhat-rx8130"
     ]
   }
 ]
