@@ -39,7 +39,7 @@
     "boot_config": [
       "enable_uart=1",
       "dtoverlay=imx519",
-      "dtoverlay=mrhat-battery-aitia",
+      "dtoverlay=mrhat-battery-aitia: max_charge_uA=3000000",
       "dtoverlay=mrhat-platform",
       "dtoverlay=mrhat-bq25622",
       "dtoverlay=mrhat-rx8130"
