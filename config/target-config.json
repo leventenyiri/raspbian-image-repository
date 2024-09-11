@@ -29,7 +29,7 @@
       },
       {
         "package": "sentinel_mrhat_cam",
-        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.1/python3-sentinel-mrhat-cam_1.1.1_all.deb"
+        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.2/python3-sentinel-mrhat-cam_1.1.2_all.deb"
       },
       {
         "package": "battery_dts_overwrite",
@@ -50,7 +50,11 @@
     ],
     "post_install": [
       "raspi-config nonint do_wifi_country HU",
-      "raspi-config nonint do_i2c 0"
+      "raspi-config nonint do_i2c 0",
+      "sudo touch /etc/adjtime",
+      "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
+      "echo \"0\" | sudo tee -a /etc/adjtime",
+      "echo \"UTC\" | sudo tee -a /etc/adjtime"
     ]
   }
 ]
