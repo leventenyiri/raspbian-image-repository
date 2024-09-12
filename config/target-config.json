@@ -55,8 +55,7 @@
       "sudo touch /etc/adjtime",
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
-      "echo \"UTC\" | sudo tee -a /etc/adjtime",
-      "bash sentinel_mrhat_cam_daemon.sh"
+      "echo \"UTC\" | sudo tee -a /etc/adjtime"
     ]
   }
 ]
