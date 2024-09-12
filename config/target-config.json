@@ -28,10 +28,6 @@
         "file_url": "https://github.com/EffectiveRange/mrhat-pkg/releases/download/v1.1.1/mrhat-pkg_1.1.1-1_all.deb"
       },
       {
-        "package": "sentinel_mrhat_cam",
-        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.2/python3-sentinel-mrhat-cam_1.1.2_all.deb"
-      },
-      {
         "package": "battery_dts_overwrite",
         "file_url": "https://github.com/bnyitrai03/drv-battery/releases/download/v1.1.0/mrhat-battery-aitia_0.1.0-1_all.deb"
       }
@@ -46,15 +42,21 @@
     ],
     "first_boot": [
       "depmod",
+      "sudo timedatectl set-timezone Europe/Budapest",
       "reboot"
     ],
     "post_install": [
       "raspi-config nonint do_wifi_country HU",
       "raspi-config nonint do_i2c 0",
+      "wget -O /tmp/install_pivariety_pkgs.sh \"https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh\"",
+      "chmod +x /tmp/install_pivariety_pkgs.sh",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_dev",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_apps",
       "sudo touch /etc/adjtime",
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
-      "echo \"UTC\" | sudo tee -a /etc/adjtime"
+      "echo \"UTC\" | sudo tee -a /etc/adjtime",
+      "bash sentinel_mrhat_cam_daemon.sh"
     ]
   }
 ]
