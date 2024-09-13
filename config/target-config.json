@@ -29,7 +29,7 @@
       },
       {
         "package": "battery_dts_overwrite",
-        "file_url": "https://github.com/bnyitrai03/drv-battery/releases/download/v1.4.1/mrhat-battery-aitia_1.4.0-1_all.deb"
+        "file_url": "https://github.com/bnyitrai03/drv-battery/releases/download/v1.4.2/mrhat-battery-aitia_1.4.0-1_all.deb"
       }
     ],
     "boot_config": [
