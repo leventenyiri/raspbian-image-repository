@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.9.2",
+    "version": "1.9.3",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -33,7 +33,7 @@
       },
       {
         "package": "battery_dts_overwrite",
-        "file_url": "https://github.com/bnyitrai03/drv-battery/releases/download/v1.1.0/mrhat-battery-aitia_0.1.0-1_all.deb"
+        "file_url": "https://github.com/bnyitrai03/drv-battery/releases/download/v1.4.2/mrhat-battery-aitia_1.4.0-1_all.deb"
       }
     ],
     "boot_config": [
