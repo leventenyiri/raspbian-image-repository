@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.9.3",
+    "version": "1.9.4",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -24,7 +24,7 @@
       },
       {
         "package": "sentinel_mrhat_cam",
-        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.5/python3-sentinel-mrhat-cam_1.1.5_all.deb"
+        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.6/python3-sentinel-mrhat-cam_1.1.6_all.deb"
       },
       {
         "package": "mrhat-pkg",
