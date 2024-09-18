@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.9.4",
+    "version": "1.9.5",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -23,7 +23,7 @@
         "package": "wavemon"
       },
       {
-        "package": "sentinel_mrhat_cam",
+        "package": "python3-sentinel-mrhat-cam",
         "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.6/python3-sentinel-mrhat-cam_1.1.6_all.deb"
       },
       {
@@ -39,24 +39,26 @@
     "boot_config": [
       "enable_uart=1",
       "dtoverlay=imx519",
-      "dtoverlay=mrhat-battery-aitia: max_charge_uA=3000000",
+      "dtoverlay=mrhat-battery-aitia:max_charge_uA=3000000",
       "dtoverlay=mrhat-platform",
       "dtoverlay=mrhat-bq25622",
       "dtoverlay=mrhat-rx8130"
     ],
     "first_boot": [
       "depmod",
-      "sudo timedatectl set-timezone Europe/Budapest",
+      "timedatectl set-timezone Europe/Budapest",
       "reboot"
+    ],
+    "pre_install": [
+      "wget -O /tmp/install_pivariety_pkgs.sh \"https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh\"",
+      "chmod +x /tmp/install_pivariety_pkgs.sh",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_dev",
+      "/tmp/install_pivariety_pkgs.sh -p libcamera_apps"
     ],
     "post_install": [
       "raspi-config nonint do_wifi_country HU",
       "raspi-config nonint do_i2c 0",
-      "wget -O /tmp/install_pivariety_pkgs.sh \"https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh\"",
-      "chmod +x /tmp/install_pivariety_pkgs.sh",
-      "/tmp/install_pivariety_pkgs.sh -p libcamera_dev",
-      "/tmp/install_pivariety_pkgs.sh -p libcamera_apps",
-      "sudo touch /etc/adjtime",
+      "touch /etc/adjtime",
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
       "echo \"UTC\" | sudo tee -a /etc/adjtime"
