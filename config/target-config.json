@@ -62,7 +62,8 @@
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
       "echo \"UTC\" | sudo tee -a /etc/adjtime",
-      "sudo systemctl disable sentinel-mrhat-cam.service"
+      "sudo systemctl disable sentinel-mrhat-cam.service",
+      "bash configure_wifi.sh"
     ]
   }
 ]
