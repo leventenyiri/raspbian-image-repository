@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.9.5",
+    "version": "1.9.7",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -24,7 +24,7 @@
       },
       {
         "package": "python3-sentinel-mrhat-cam",
-        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.7/python3-sentinel-mrhat-cam_1.1.7_all.deb"
+        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.8/python3-sentinel-mrhat-cam_1.1.8_all.deb"
       },
       {
         "package": "mrhat-pkg",
@@ -62,7 +62,10 @@
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
       "echo \"UTC\" | sudo tee -a /etc/adjtime",
-      "sudo systemctl disable sentinel_mrhat_cam.service"
+      "sudo systemctl disable sentinel_mrhat_cam.service",
+      "chmod +x configure_wifi.sh",
+      "bash configure_wifi.sh",
+      "echo \"DefaultTimeoutStopSec=15s\" | sudo tee -a /etc/systemd/system.conf"
     ]
   }
 ]
