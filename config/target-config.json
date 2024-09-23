@@ -1,7 +1,7 @@
 [
   {
     "name": "edge-pi-zero-aitia",
-    "version": "1.9.5",
+    "version": "1.9.7",
     "reference": "2024-07-05-raspios-bullseye",
     "sources": [
       {
@@ -47,6 +47,7 @@
     "first_boot": [
       "depmod",
       "timedatectl set-timezone Europe/Budapest",
+      "sudo systemctl disable sentinel_mrhat_cam.service",
       "reboot"
     ],
     "pre_install": [
@@ -61,8 +62,7 @@
       "touch /etc/adjtime",
       "echo \"0.0 0 0.0\" | sudo tee /etc/adjtime",
       "echo \"0\" | sudo tee -a /etc/adjtime",
-      "echo \"UTC\" | sudo tee -a /etc/adjtime",
-      "sudo systemctl disable sentinel_mrhat_cam.service"
+      "echo \"UTC\" | sudo tee -a /etc/adjtime"
     ]
   }
 ]
