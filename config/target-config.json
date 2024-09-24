@@ -24,7 +24,7 @@
       },
       {
         "package": "python3-sentinel-mrhat-cam",
-        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.8/python3-sentinel-mrhat-cam_1.1.8_all.deb"
+        "file_url": "https://github.com/leventenyiri/Packaging_sentinel_mrhat_cam/releases/download/v1.1.10/python3-sentinel-mrhat-cam_1.1.10_all.deb"
       },
       {
         "package": "mrhat-pkg",
